@@ -1,9 +1,16 @@
 [project]
 name = "mapit"
 version = "0.1.0"
-description = "Add your description here"
+description = "Open Google Maps in the Browser with a given address."
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
     "pyperclip>=1.11.0",
 ]
+
+[project.scripts]
+mapit = "mapit:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
