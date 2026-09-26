@@ -1,0 +1,19 @@
+#!/usr/bin/env python3
+# # mapit.py - Launches a map in the browser using an address from the command line or clipboard.
+
+
+import webbrowser
+import sys
+
+import pyperclip
+
+if len(sys.argv) > 1:
+    # get address from the comamand line
+    address = ' '.join(sys.argv[1:])
+else:
+    # get the address from the clipboard
+    address = pyperclip.paste()
+
+webbrowser.open('https://www.google.com/maps/place/' + address)
+
+print(address)
